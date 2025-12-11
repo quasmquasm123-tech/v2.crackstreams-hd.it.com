@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - CrackStreams Free Sports Streams</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .contact-page {
+            background: #f8fafc;
+            min-height: 100vh;
+        }
+        
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .contact-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
+        .contact-header h1 {
+            color: #1e293b;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+        
+        .contact-header .highlight {
+            color: #dc2626;
+        }
+        
+        .contact-header p {
+            color: #64748b;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .contact-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .contact-icon {
+            width: 70px;
+            height: 70px;
+            background: #fef2f2;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.8rem;
+            color: #dc2626;
+        }
+        
+        .contact-card h3 {
+            color: #1e293b;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+        
+        .contact-card p {
+            color: #64748b;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .contact-info {
+            text-align: left;
+            margin-top: 1.5rem;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #f1f5f9;
+        }
+        
+        .info-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .info-item i {
+            color: #dc2626;
+            font-size: 1.2rem;
+            margin-top: 4px;
+        }
+        
+        .info-content h4 {
+            color: #1e293b;
+            margin-bottom: 4px;
+            font-size: 1rem;
+        }
+        
+        .info-content p {
+            color: #64748b;
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+        
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: #dc2626;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            padding: 10px 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .faq-section {
+            background: white;
+            border-radius: 12px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            margin-top: 3rem;
+        }
+        
+        .faq-section h2 {
+            color: #1e293b;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+        
+        .faq-item {
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            background: #f8fafc;
+            border-radius: 8px;
+            border-left: 4px solid #dc2626;
+        }
+        
+        .faq-question {
+            color: #1e293b;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .faq-answer {
+            color: #64748b;
+            line-height: 1.6;
+        }
+        
+        .response-time {
+            text-align: center;
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        .contact-actions {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-container {
+                padding: 20px 15px;
+            }
+            
+            .contact-header h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-card {
+                padding: 1.5rem;
+            }
+            
+            .faq-section {
+                padding: 2rem;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="contact-page">
+    <div class="contact-container">
+        <a href="index.html" class="back-home">
+            <i class="fas fa-arrow-left"></i>
+            Back to CrackStreams Home
+        </a>
+        
+        <div class="contact-header">
+            <h1>Contact <span class="highlight">CrackStreams</span> Support</h1>
+            <p>Get help with streaming issues, report problems, or contact us for other inquiries</p>
+        </div>
+        
+        <div class="contact-grid">
+            <!-- Technical Support -->
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3>Technical Support</h3>
+                <p>Having issues with streams? Get help with streaming problems, buffering, or quality issues.</p>
+                
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-tv"></i>
+                        <div class="info-content">
+                            <h4>Stream Issues</h4>
+                            <p>Buffering, lag, or stream not loading</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-wifi"></i>
+                        <div class="info-content">
+                            <h4>Connection Problems</h4>
+                            <p>Can't connect to streams or links broken</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-mobile-alt"></i>
+                        <div class="info-content">
+                            <h4>Device Support</h4>
+                            <p>Mobile, tablet, or smart TV issues</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-actions">
+                    <a href="#faq" class="btn btn-outline">
+                        <i class="fas fa-question-circle"></i> Check FAQ
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Content & DMCA -->
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-gavel"></i>
+                </div>
+                <h3>Content & DMCA</h3>
+                <p>Copyright issues, DMCA takedown requests, or reporting inappropriate content.</p>
+                
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-copyright"></i>
+                        <div class="info-content">
+                            <h4>DMCA Requests</h4>
+                            <p>Send copyright infringement notices</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-flag"></i>
+                        <div class="info-content">
+                            <h4>Report Content</h4>
+                            <p>Report inappropriate or illegal content</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-exchange-alt"></i>
+                        <div class="info-content">
+                            <h4>Link Removal</h4>
+                            <p>Request removal of specific links</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-actions">
+                    <a href="dmca.html" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> DMCA Page
+                    </a>
+                </div>
+            </div>
+            
+            <!-- General Inquiries -->
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h3>General Inquiries</h3>
+                <p>Partnerships, advertising, feedback, or other general questions about our service.</p>
+                
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-handshake"></i>
+                        <div class="info-content">
+                            <h4>Partnerships</h4>
+                            <p>Business collaborations or partnerships</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-ad"></i>
+                        <div class="info-content">
+                            <h4>Advertising</h4>
+                            <p>Advertise on our platform</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-comment-dots"></i>
+                        <div class="info-content">
+                            <h4>Feedback</h4>
+                            <p>Suggestions or general feedback</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-actions">
+                    <button class="btn btn-outline" onclick="showEmail('general')">
+                        <i class="fas fa-envelope"></i> Email Us
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contact Information -->
+        <div class="contact-card" style="max-width: 800px; margin: 0 auto;">
+            <div class="contact-icon">
+                <i class="fas fa-address-card"></i>
+            </div>
+            <h3>Contact Information</h3>
+            <p>Choose the appropriate contact method based on your needs:</p>
+            
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <div class="info-content">
+                        <h4>General Support</h4>
+                        <p>support@crackstreams-alternative.com</p>
+                        <small>For technical issues and general questions</small>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fas fa-balance-scale"></i>
+                    <div class="info-content">
+                        <h4>DMCA & Legal</h4>
+                        <p>dmca@crackstreams-alternative.com</p>
+                        <small>Copyright infringement and legal matters</small>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fas fa-bullhorn"></i>
+                    <div class="info-content">
+                        <h4>Advertising</h4>
+                        <p>ads@crackstreams-alternative.com</p>
+                        <small>Advertising and partnership inquiries</small>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <div class="info-content">
+                        <h4>Abuse Reports</h4>
+                        <p>abuse@crackstreams-alternative.com</p>
+                        <small>Report abuse, spam, or illegal content</small>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="response-time">
+                <p><strong>Response Time:</strong> 24-48 hours for most inquiries</p>
+                <p><strong>Emergency:</strong> No phone support available - use email only</p>
+            </div>
+        </div>
+        
+        <!-- FAQ Section -->
+        <div class="faq-section" id="faq">
+            <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-play-circle"></i>
+                    <span>Why won't my stream load?</span>
+                </div>
+                <div class="faq-answer">
+                    Try these steps: 1) Refresh the page, 2) Try an alternative stream link, 3) Clear browser cache, 4) Disable ad blocker temporarily, 5) Try a different browser.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Is it safe to use these streams?</span>
+                </div>
+                <div class="faq-answer">
+                    Always use a reputable VPN for safety. We recommend using ad blockers and never downloading anything from streaming sites. See our <a href="disclaimer.html" style="color: #dc2626;">Disclaimer</a> for more safety information.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-legal"></i>
+                    <span>How do I submit a DMCA takedown?</span>
+                </div>
+                <div class="faq-answer">
+                    Visit our <a href="dmca.html" style="color: #dc2626;">DMCA page</a> for the complete procedure. You'll need to send a formal DMCA notice with specific details about the infringing content.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>Can I watch on mobile devices?</span>
+                </div>
+                <div class="faq-answer">
+                    Yes! Our streams work on smartphones and tablets. We recommend using Chrome or Firefox mobile browsers for best compatibility.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-clock"></i>
+                    <span>How quickly do you respond to emails?</span>
+                </div>
+                <div class="faq-answer">
+                    We typically respond within 24-48 hours. DMCA notices get priority response. Please check our FAQ before emailing as many questions are already answered here.
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="index.html" class="btn btn-primary">
+                <i class="fas fa-home"></i> Return to Home
+            </a>
+            <a href="disclaimer.html" class="btn btn-outline" style="margin-left: 1rem;">
+                <i class="fas fa-exclamation-circle"></i> Disclaimer
+            </a>
+            <a href="privacy.html" class="btn btn-outline" style="margin-left: 1rem;">
+                <i class="fas fa-shield-alt"></i> Privacy
+            </a>
+        </div>
+    </div>
+    
+    <script>
+        // Simple email display function
+        function showEmail(type) {
+            let email = '';
+            let subject = '';
+            
+            switch(type) {
+                case 'general':
+                    email = 'support@crackstreams-alternative.com';
+                    subject = 'General Inquiry - CrackStreams Support';
+                    break;
+                case 'dmca':
+                    email = 'dmca@crackstreams-alternative.com';
+                    subject = 'DMCA Takedown Request';
+                    break;
+                case 'ads':
+                    email = 'ads@crackstreams-alternative.com';
+                    subject = 'Advertising Inquiry';
+                    break;
+                default:
+                    email = 'support@crackstreams-alternative.com';
+                    subject = 'Contact Form Submission';
+            }
+            
+            // Create a temporary email composition link
+            const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('Please include details about your inquiry:')}`;
+            
+            // Open default email client
+            window.location.href = mailtoLink;
+            
+            // Show notification
+            const notification = document.createElement('div');
+            notification.textContent = 'Opening email client... Please check your default email application.';
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: #10b981;
+                color: white;
+                padding: 12px 24px;
+                border-radius: 8px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+                z-index: 1000;
+                animation: slideIn 0.3s ease;
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.3s ease';
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 300);
+            }, 3000);
+        }
+        
+        // Add CSS for animations
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            
+            @keyframes slideOut {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
